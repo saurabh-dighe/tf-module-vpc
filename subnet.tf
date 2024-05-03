@@ -1,7 +1,7 @@
 #Provisioning public subnet
 resource "aws_subnet" "public_subnet" {
   count                     = length(var.PUBLIC_SUBNET_CIDR)
-  vpc_id                    = aws_vpc.roboshop-dev.id
+  vpc_id                    = aws_vpc.roboshop_dev.id
   cidr_block                = element(var.PUBLIC_SUBNET_CIDR, count.index)
   availability_zone         = element(var.ZONE, count.index)
   map_public_ip_on_launch   = true
