@@ -1,7 +1,7 @@
 #Provioning VPC peering
 
 resource "aws_vpc_peering_connection" "peering_connection" {
-  peer_vpc_id   = aws_vpc.DEFAULT_VPC.id
+  peer_vpc_id   = data.aws_vpc.DEFAULT_VPC
   vpc_id        = aws_vpc.roboshop_dev.id
   auto_accept   = true
 
