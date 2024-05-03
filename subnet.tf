@@ -1,6 +1,6 @@
 resource "aws_subnet" "roboshop-public-subnet-1" {
   vpc_id     = aws_vpc.roboshop-dev.id
-  cidr_block = var.PUBLIC_SUBNET_CIDR
+  cidr_block = [var.PUBLIC_SUBNET_CIDR]
 
   tags = {
     Name = "roboshop-public-subnet-1"
