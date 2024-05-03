@@ -5,3 +5,4 @@ resource "aws_vpc" "roboshop-dev" {
   tags = {
     Name = "roboshop-${var.ENV}-dev"
   }
+}
