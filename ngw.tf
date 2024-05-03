@@ -15,4 +15,7 @@ resource "aws_nat_gateway" "ngw" {
 #Provisioning elastic(puplic) IP for NGW
 resource "aws_eip" "e_ip" {
   domain   = "vpc"
+  tags = {
+    Name = "roboshop-${var.ENV}-ngw-eip"
+  }
 }
