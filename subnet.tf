@@ -13,7 +13,7 @@ resource "aws_subnet" "public_subnet" {
 #Provisioning private subnet
 resource "aws_subnet" "private_subnet" {
   count                    = length(var.PRIVATE_SUBNET_CIDR)
-  vpc_id                   = aws_vpc.roboshop-dev.id
+  vpc_id                   = aws_vpc.roboshop_dev.id
   cidr_block               = element(var.PRIVATE_SUBNET_CIDR, count.index)
   availability_zone        = element(var.ZONE, count.index)
 
