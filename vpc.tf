@@ -3,6 +3,6 @@ resource "aws_vpc" "roboshop-dev" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "roboshop-${var.ENV}-dev"
+    Name = "roboshop-${var.ENV}-vpc"
   }
 }
