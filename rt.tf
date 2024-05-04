@@ -48,14 +48,14 @@ resource "aws_default_route_table" "example" {
   default_route_table_id = var.DEFAULT_VPC_RT
 
   route {
-    cidr_block = var.PUBLIC_SUBNET_CIDR
+    cidr_block = var.DEFAULT_VPC_CIDR
     vpc_peering_connection_id = aws_vpc_peering_connection.peering_connection.id
   }
 
-  route {
-    cidr_block = var.PRIVATE_SUBNET_CIDR
-    vpc_peering_connection_id = aws_vpc_peering_connection.peering_connection.id
-  }
+  # route {
+  #   cidr_block = var.PRIVATE_SUBNET_CIDR
+  #   vpc_peering_connection_id = aws_vpc_peering_connection.peering_connection.id
+  # }
 
   tags = {
     Name = "Default_RT_TF"
