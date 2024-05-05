@@ -23,9 +23,9 @@ output "PUBLIC_SUBNET_ID" {
 }
 
 output "PRIVATE_SUBNET_CIDR" {
-  value = aws_subnet.private_subnet.cidr_block
+  value = aws_subnet.private_subnet.*.cidr_block
 }
 
 output "PUBLIC_SUBNET_CIDR" {
-  value = aws_subnet.public_subnet.cidr_block
+  value = aws_subnet.public_subnet.*.cidr_block
 }
