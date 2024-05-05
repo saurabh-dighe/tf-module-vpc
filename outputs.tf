@@ -1,5 +1,5 @@
 output "VPC_ID" {
-  value = data.aws_vpc.roboshop_dev.id
+  value = aws_vpc.roboshop_dev.id
 }
 
 output "DEFAULT_VPC_ID" {
@@ -7,7 +7,7 @@ output "DEFAULT_VPC_ID" {
 }
 
 output "VPC_CIDR" {
-  value = data.aws_vpc.roboshop_dev.cidr_block
+  value = aws_vpc.roboshop_dev.cidr_block
 }
 
 output "DEFAULT_VPC_CIDR" {
@@ -15,17 +15,17 @@ output "DEFAULT_VPC_CIDR" {
 }
 
 output "PRIVATE_SUBNET_ID" {
-  value = data.aws_subnet.private_subnet.*.id
+  value = aws_subnet.private_subnet.*.id
 }
 
 output "PUBLIC_SUBNET_ID" {
-  value = data.aws_subnet.public_subnet.*.id
+  value = aws_subnet.public_subnet.*.id
 }
 
 output "PRIVATE_SUBNET_CIDR" {
-  value = data.aws_subnet.private_subnet.cidr_block
+  value = aws_subnet.private_subnet.cidr_block
 }
 
 output "PUBLIC_SUBNET_CIDR" {
-  value = data.aws_subnet.public_subnet.cidr_block
+  value = aws_subnet.public_subnet.cidr_block
 }
