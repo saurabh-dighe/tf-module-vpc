@@ -44,7 +44,7 @@ resource "aws_route_table_association" "private_rt_association" {
   route_table_id    = aws_route_table.private_rt.id
 }
 
-resource "aws_route" "r" {
+resource "aws_route" "DEFAULT_VPC_RT" {
   route_table_id            = var.DEFAULT_VPC_RT
   destination_cidr_block    = var.VPC_CIDR
   vpc_peering_connection_id = aws_vpc_peering_connection.peering_connection.id
