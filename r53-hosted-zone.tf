@@ -1,7 +1,7 @@
 
 #Provisioning Private hosted zone
 resource "aws_route53_zone" "private_hosted_zone" {
-  name = "roboshop-internal"
+  name = "roboshop.internal"
 
   vpc {
     vpc_id = aws_vpc.roboshop_dev.id
